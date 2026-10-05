@@ -35,7 +35,7 @@ python -m pip install -r requirements-dev.txt
 python -m pytest -q tests
 ```
 
-Run the canonical notebook top to bottom to regenerate the saved model and metrics. Saved `.joblib` models should be loaded with the scikit-learn version recorded in `VALIDATION.md`, or rebuilt with the notebook after changing versions.
+Run the canonical notebook top to bottom to regenerate the saved model and metrics. For compatible `.joblib` loading, use the dependency versions recorded in `requirements-validated.txt`, or rebuild the model after changing versions.
 
 The HTTP entrypoint is a local demonstration service. Use `docker build -t english-french-translator .` to build its container; the Docker build itself is not certified by local Python tests.
 

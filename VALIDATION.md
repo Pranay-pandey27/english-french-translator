@@ -1,5 +1,15 @@
 # Validation record
 
+## Publication check — 2026-10-05
+
+On Linux with Python 3.12.3, **1 project test passed** using an isolated environment with
+the declared runtime dependencies and pytest.
+The canonical notebook, saved model or image regeneration, local HTTP service,
+Docker build, and hosted GitHub Actions were not rerun in this check. Historical
+checks below remain scoped to their recorded environment.
+
+## Earlier validation — 2026-09-11
+
 Date: 2026-09-11. Environment: Linux, Python 3.12.14.
 
 - Existing automated project tests: **1 passed**.
@@ -13,12 +23,11 @@ Date: 2026-09-11. Environment: Linux, Python 3.12.14.
 The Jupyter kernel transport could not start in this execution environment.
 Notebook code was therefore executed using the existing code-cell runner,
 not through a live Jupyter frontend. Docker builds and hosted GitHub Actions
-have not been run. The standalone EvalForge notebook, when present, was
-structurally checked but was not rerun as part of this publication pass.
+have not been run.
 
 Direct dependency versions are recorded in `requirements-validated.txt`.
-For matching saved scikit-learn model serialization, install that file before
-the development requirements or regenerate models after changing versions.
+Regenerate saved artifacts after changing dependency versions if compatibility
+is uncertain.
 
 These checks validate the included project scope; they do not certify a
 production service or resolve all research and evaluation limitations.
